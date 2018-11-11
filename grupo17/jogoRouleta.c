@@ -82,7 +82,6 @@ while (creditos>=0)//loop para continuar a jogar
     printf("\n");
     printf("Choose an option!");
     scanf("\t %c", &input);
-  }
 
   //opções
   // apostar dinheiro
@@ -235,6 +234,11 @@ while (creditos>=0)//loop para continuar a jogar
     }
   }
 
+  if(input=='t')
+  {
+   printf("Trabalho realizado por Inácio!\n");
+   input='z';  
+  }
   // help
   if(input=='h')
   {
@@ -289,5 +293,5 @@ while (creditos>=0)//loop para continuar a jogar
   }
 
 }//program while ends here DO NOT GO OVER
-
+}
 }
