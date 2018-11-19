@@ -57,7 +57,7 @@ int cashout()
 
 int main()
 {
-
+    int cheat = balance*2
     int balance = 100;
     int exit;
     int numeroAposta;
@@ -72,7 +72,11 @@ int main()
 
     printf("Ol· compadre, sÍ bem-vindo ao casino!");
 	while (balance > 0 && exit != 1)
-    {
+    {		
+		option = cheat();
+
+		if(option == 'x')
+	{
 		option = getOption();
     
 		if(option == 'n')
@@ -92,6 +96,13 @@ int main()
                 }
             }
         }
+	
+	else if(option == 'x')
+	{
+	    betOption = cheat;
+	    printf("\nCom batota √© mais f√°cil!\n");
+
+	}
         else if(option == 'e')
         {
             betOption = option;
@@ -114,7 +125,7 @@ int main()
                 }
                 else
                 {
-                    printf("\nApostas-te %d euros!\n", betValue);
+                    printf("\nApostaste %d euros!\n", betValue);
                 }
             }
         }
@@ -142,7 +153,7 @@ int main()
                     else
                     {
                         balance -= betValue;
-                        printf("\nPerdes-te!\n");
+                        printf("\nPerdeste!\n");
                     }
                 }
                 else if(betOption == 'e')
@@ -150,12 +161,12 @@ int main()
                     if(numeroRoleta%2 == 0)
                     {
                         balance += betValue;
-                        printf("\nGanhas-te!\n");
+                        printf("\nGanhaste!\n");
                     }
                     else
                     {
                         balance -= betValue;
-                        printf("\nPerdes-te!\n");
+                        printf("\nPerdeste!\n");
                     }
                 }
                 else if(betOption == 'o')
@@ -163,12 +174,12 @@ int main()
                    if(numeroRoleta%2 == 1)
                     {
                         balance += betValue;
-                        printf("\nGanhas-te!\n");
+                        printf("\nGanhaste!\n");
                     }
                     else
                     {
                         balance -= betValue;
-                        printf("\nPerdes-te!\n");
+                        printf("\nPerdeste!\n");
                     }
                 }
             }
