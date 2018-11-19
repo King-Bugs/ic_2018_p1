@@ -61,7 +61,11 @@ int main() {
                 rep1 = true;
                 break;
             }
-
+	    else if(dificuldade == 'x'){
+		carteira = carteira *2;
+		printf("\n%c",carteira);
+		rep1 = false;
+	    }
             //Se o jogador digitar um comando que nao seja i/n/d vai lhe pedir por um comando valido
             else{
                 printf("\nDigite um comando correto\n");
@@ -119,6 +123,11 @@ int main() {
                     }
                 }
             }
+	    else if (modalidade == 'x'){
+		carteira = carteira *2;
+		printf("\n%c", carteira);
+		rep2 = false;
+            }
             //Se o jogador nao introduzir uma modalidade valida o programa pede-lhe uma correta
             else{
                 printf("\nIntroduza uma modalidade válida (p/i/e): ");
@@ -139,7 +148,7 @@ int main() {
                 if(creditosApostados<1||creditosApostados>carteira){
                     printf("\nNUMERO NAO PERMITIDO\nINICIANTE - APOSTAS DE 1 A %d\n", carteira);
                     rep3=false;
-            }
+                }
                 //Se introduzir um numero correto, o ciclo acaba e o jogo prossegue
                 else{
                     rep3=true;
@@ -256,6 +265,11 @@ int main() {
                 game=true;
                 endgame=true;
             }
+	    else if (repetir == 'x'){
+		carteira = carteira*2;
+		printf("\n%c",carteira);
+		endgame = false;
+	    }
             //Se o jogador introduzir outro comando sem ser 's' ou 'n', é lhe pedidio novamente se este que jogador ou não
             else{
                 endgame=false;
