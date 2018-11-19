@@ -205,6 +205,10 @@ int main()
                     case 'b':  /*Apresenta os créditos disponíveis*/
                         printf("Balance: %d $ \n", money);
                     break;
+		    case 'x':
+                        money = money *2;
+                        printf("Balance %d $ \n", money);
+  		    break;
 
                     default:   /*Caso o utilizador tente escolher uma opção que não exista*/
                         printf("That's not an option!\n");
@@ -345,6 +349,10 @@ int main()
                     case 'b':    /*Apresenta os créditos disponíveis*/
                         printf("Balance: %d $ \n", money);
                     break;
+		    case 'x':
+                        money = money *2;
+                        printf("Balance %d $ \n", money);
+                    break;
 
                     default:    /*Caso o utilizador tente escolher uma opção que não exista*/
                         printf("That's not an option!\n");
@@ -484,6 +492,10 @@ int main()
 
                     case 'b':   /*Apresenta os créditos disponíveis*/
                         printf("Balance: %d $ \n", money);
+                    break;
+		    case 'x':
+                        money = money *2;
+                        printf("Balance %d $ \n", money);
                     break;
 
                     default:   /*Caso o utilizador tente escolher uma opção que não exista*/
