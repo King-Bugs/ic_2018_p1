@@ -56,7 +56,8 @@ do{
     "E Roll\n"
     "F Help\n"
     "G Show Balance\n"
-    "H Cashout and go home\n\n");
+    "H Cashout and go home\n"
+    "X Double the value\n\n");
   sleep(3);
   printf("Please select option:\n");
   option = getchar();
@@ -226,6 +227,13 @@ else if (option == 'H' || option == 'h'){
 
    }
 
+// Option X---------------------------------------------------------------------$
+else if (option == 'X' || option == 'x'){
+  balance = balance*2;
+  printf("Cheaters rule the world, huh?");
+  getchar(); 
+  continue;
+   }
 
 else {
   printf("invalid answer! Try again \n");
