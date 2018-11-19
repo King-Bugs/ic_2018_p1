@@ -124,7 +124,12 @@ int main ()
 	        printf ("That is an odd bet!\n");
 	        choice = 3;
         }
-
+	//player chooses "x"
+	else if (input == 'x'){
+		printf ("Duble money cheat\n");
+		money = money*2;
+		printf("\nYou now have %d euros, you cheater!!!!\n", money);
+	}
         //Player choses "r"
         else if (input == 'r' && bet == 0){
 	        printf ("Place a bet!!!\n");
