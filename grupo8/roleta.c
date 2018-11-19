@@ -25,13 +25,14 @@ int main() {
 
     //Boas vindas ao jogador
     printf("Bem vindo ao Jogo da Roleta!!! Tente a sua sorte!\n");
-
+    
     //ciclo de repetição do jogo
     while(game==false){
          rep2=false;
          rep3=false;
          rep4 = false;
          endgame = false;
+   
 
         //ciclo da dificuldade escolhida
         while(rep1==false){
@@ -43,7 +44,11 @@ int main() {
             printf("\td - Dificil (credito minimo: 20)\n");
             //Escolha da dificuldade
             scanf("\n%c", &dificuldade);
-
+ 	    
+            if(dificuldade == 't'){
+                 printf("Trabalho ralizado por diogo henriques e miguel costa");
+                 break;
+            }	
             //Se o jogador selecionar a difucldade iniciante o cilco acaba e o jogo continua
             if(dificuldade == 'i'){
                 rep1 = true;
