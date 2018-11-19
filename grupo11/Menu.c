@@ -27,6 +27,7 @@ void PrintMenu(int balance, int currentBet)
 	printf("\n\tp - save game");
 	printf("\n\tl - load previous game");
 	printf("\n\tc - cashout and go home");
+	printf("\n\tt - credits");
 }
 
 /*This method repeats itself until the player has made a correct selection on the minimum value to bet.
@@ -147,6 +148,9 @@ void MainLoop(unsigned short minBet)
 				}
 				else
 					printf("\nThere is no saved game to load.");
+				break;
+			case 't':
+				printf("Game Developed by : a21801608 João Moreira | a21805651 Joana da Silva.");
 				break;
 			default: //Prints unkown command.
 				printf("\nCan't understand you mate. Write h and press enter to show menu options");
