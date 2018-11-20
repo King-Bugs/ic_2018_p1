@@ -10,18 +10,23 @@ void delay (int seconds)  // suspende a execução por um determinado tempo em s
 }
 
 
-void printstats( int quantia, int aposta)     //inicia e carrega as variáveis quantia e aposta.//
+void printstats( int quantia, int aposta, int dquantia)     //inicia e carrega as variáveis quantia e aposta.//
 {
     printf("\n\tquantia : %d", quantia);      //imprime a variável quantia.//
     printf("\n\taposta : %d", aposta);        //imprime a variável aposta.//
-}
+   }
 
-void printMenu( int quantia, int aposta)
+void printMenu( int quantia, int aposta, int dquantia)
 {
-    printstats(quantia, aposta);
+    printstats(quantia, aposta, dquantia);
     printf("\nPode apostar numa das segintes opções:\n\n");  //Imprime e muda de linha.//
     printf("1) Pode escolher um número de 1 a 35 (Aposta de alto risco!)\n\n"); //Imprime e muda de linha.//
     printf("2) Pode escolher par ou ímpar"); //Imprime.//
+    printf("Para duplicar quantia press 3");
+    scanf("%d", &dquantia);
+    if (dquantia == 3)
+    {
+       printf ("\n\dquantia : %d", quantia*2);}
 }
 
 void apostarnumero(int *quantia)
@@ -141,6 +146,7 @@ int parimpar;
 int numero;
 int aposta;
 int quantia;
+int dquantia;
     
 char nome[100]; // variavel nome//
 printf("Digite seu nome:\n");// imprime//
@@ -154,7 +160,7 @@ quantia=100; // mostra quantia//
 
 while (quantia>0)
 {
-    printMenu(quantia, aposta);
+    printMenu(quantia, aposta, dquantia);
     printf("\nEscolha a opção em que quer apostar 1 ou 2> ");
     scanf("%d", &opcao);
     
