@@ -72,7 +72,10 @@ int main()
                 printf("Adeus. Sais daqui com %d€.\n",balance);
                 quit = 1;
                 break;
-                
+            case 'x':
+		balance = (balance*2);
+		printf("Cheats, balance: %d€ ", balance);
+		break;   
             default:                // quando a opçao nao é valida  
                 printf("\nNao é uma opçao.");
                 
