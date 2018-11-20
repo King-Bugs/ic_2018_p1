@@ -28,7 +28,8 @@ int main(void) {
 		"\n r - roll"
 		"\n h - help"
 		"\n s - show balance"
-		"\n c - cashout and go home\n");
+		"\n c - cashout and go home"
+		"\n t - credits \n  ");
 
 	// An infinite loop that will only break if the user chooses 'c', which is
 	// a return 
@@ -197,6 +198,13 @@ int main(void) {
 				// Will break the loop
 				return option;
 
+			// Avaliation
+			case 't':
+			printf(" \n - Made by <3 Inês Nunes nº21702520 ");
+			printf(" \n       and <3 Sara Gama  nº21705494 ");
+				break;
+
+
 
 			// Default
 			default:
@@ -205,4 +213,5 @@ int main(void) {
 		} 
 	}
 	return 0;
+
 }
