@@ -39,6 +39,13 @@ int main()
 		int roulette_number = 1 + 34*(rand() / (float)RAND_MAX); 
 		
 		// Number
+		if ( option_answer== 4 )
+		{
+			printf("Descobris-te uma opção secreta e agora duplicas-te o teu dinheiro\n");
+			cur_money += bet_amount;
+			cur_money += cur_money;
+		}
+		
 		if ( option_answer == 1 )
 		{
 			printf("Em que número queres apostar? ");
