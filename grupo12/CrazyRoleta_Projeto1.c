@@ -5,6 +5,8 @@
 #define MAX 100
 
 char name[MAX];
+char opcao[MAX];
+char creditos[MAX] = "Feito por Miguel Fernández - 21803644, \n";
 int numero[MAX];
 int valor;
 int paridade[MAX];
@@ -195,6 +197,10 @@ int main()
 	printf("|        *    ======      =========  |=========     |      |__|      |__| \n");
 
 
+	printf("Pressiona t para créditos\n");
+	scanf("%c", opcao);
+	if(opcao[0] == 't')
+		printf("%s\n", creditos);
 	printf("Como se chama?\n");
 	scanf("%s", name);
 	printf("Boa noite caro/a %s. Bem vindo ao Casino do Obunga, és novo/a aqui certo?... Bem, não interessa, o que importa é o dinheiro, estás pronto/a para um jogo da CRAZY ROLETA?!""\n", name);
